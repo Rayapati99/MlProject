@@ -6,5 +6,7 @@ seaborn
 scikit-learn
 catboost
 dill
+#pickle
+
 
 #-e .
