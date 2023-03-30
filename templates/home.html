@@ -1,0 +1,77 @@
+<html>
+<body>
+   <div class="login">
+        <h1>Student Exam Performance Indicator</h1>
+        <form action="{{url_for('predict_datapoint')}}" method='post'>
+            <h1>
+                <legend>
+                  Student Exam Performance Prediction
+               </legend>
+
+            </h1>
+         <div class='mb-3'>
+                <label class='from-label'>Gender</label>
+            <select class='from-control' name='gender' placeholder='Enter you Gender' required>
+                <option class='placeholder' selected disabled value=''>Select your Gender</option>
+                <option value='male'>Male</option>
+                <option value='female'>Female</option>
+            </select>
+         </div>
+         <div class='mb-3'>
+            <label class='from-label'>race_ethnicity</label>
+            <select class='from-control' name='ethnicity' placeholder='Enter you ethnicity' required>
+                <option class='placeholder' Selected disabled value=''>Select your ethnicity</option>
+                <option value='group A'>Group A</option>
+                <option value='group B'>Group B</option>
+                <option value='group C'>Group C</option>
+                <option value='group D'>Group D</option>
+                <option value='group E'>Group E</option>
+            </select>
+         </div>
+         <div>
+            <label class='from-label'>parental level of education</label>
+            <select class='from-control' name='parental_level_of_education' placeholder='Enter you parent education' required/>
+                <option class='placeholder' Selected disabled value='' >Select parent education</option>
+                <option value='some college'>Some College</option>
+                <option value="associate's degree">Associate's Degree</option>
+                <option value='high school'>High School</option>
+                <option value='some high school'>some high school</option>
+                <option value="bachelor's degree">Bachelor's Degree</option>
+                <option value="master's degree">Master's Degree</option>
+            </select>
+         </div>
+         <div class='mb-3'>
+            <label class ='from-label'>lunch Type</label>
+            <select class='from-control' name='lunch' placeholder='Enter  lunch type' required/>
+            <option class='placeholder' Selected disabled value=''>Select  lunch type</option>
+            <option value='standard'>standard</option>
+            <option value='free/reduced'>free/reduced</option>
+            </select>
+         </div>
+         <div class='mb-3'>
+            <label class='from-label'>Test preparation course</label>
+            <select class='from-control' name='test_preparation_course' placeholder='Enter you course' required/>
+            <option class='placeholder' Selected disabled value=''>Select course</option>
+            <option value='none'>None</option>
+            <option value='completed'>completed</option>
+            </select>
+         </div>
+         <div class='mb-3'>
+            <label class='from-label'>Reading score out of 100</label>
+            <input class ='from-control' type='number' name='reading_score' placeholder='Enter your reading score' min='0' max='100' required/>
+         </div>
+         <div class='mb-3'>
+            <label class='from-label'>Writing Score out of 100</label>
+            <input class='from-control' type='number' name='writing_score' placeholder='Enter your writing score' min='0' max='100' required/>
+         </div>
+         <div class='mb-3'>
+            <input class='btn btn-primary' type='submit' value='predict your maths score' required/>
+         </div>
+
+        </form>
+
+    <h2>
+          The prediction is {{results}}
+    </h2> 
+</body>
+</html>
